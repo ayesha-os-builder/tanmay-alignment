@@ -38,6 +38,11 @@
   .goal-list div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 16px 18px; border: 1px solid var(--hairline); border-radius: 16px; align-items: center; background: var(--teal-soft); }
   .goal-list span { font-size: 26px; }
   .goal-list strong { font-size: 18px; font-weight: 600; line-height: 1.35; }
+  .takeaway-list { display: grid; gap: 12px; margin: 14px 0 6px; }
+  .takeaway-list div { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; align-items: center; background: var(--warm); }
+  .takeaway-list span { font-size: 20px; }
+  .takeaway-list strong { font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ink-2); }
+  .audio-placeholder { margin-top: 6px; padding: 16px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; background: var(--warm); font-size: 17px; font-weight: 600; color: var(--ink-2); }
   textarea {
     width: 100%; min-height: 110px; font-size: 18px; padding: 14px 16px; line-height: 1.5;
     border: 2px solid var(--hairline); border-radius: 16px; font-family: inherit;
@@ -80,35 +85,65 @@
   <div class="hero">
     <div class="hero-emoji" aria-hidden="true">✨🧭</div>
     <h1>Ayesha + Tanmay Weekly Planning</h1>
-    <p class="fact">Second Body Health - this week's agenda</p>
+    <p class="fact">Second Body Health - Monday 21 to Sunday 27 September 2026</p>
     <p class="intro">Ayesha’s Instinct has a few quick questions so Ayesha can plan ahead.</p>
   </div>
 
   <div class="group">
-    <h2 class="group-heading">🎯 The agenda for the week</h2>
-    <p class="context">These are the goals Ayesha has set for Second Body Health this week:</p>
+    <h2 class="group-heading">🎯 The goals for this week</h2>
+    <p class="context">These are the goals Ayesha has set for Second Body Health this week (Mon 21 - Sun 27 Sep):</p>
     <div class="goal-list">
-      <div><span>🎬</span><strong>3 TOFU videos from Ayesha's trial accounts</strong></div>
-      <div><span>💛</span><strong>Community engagement every alternate day, minimum - organic posts whenever the vibes come</strong></div>
-      <div><span>📣</span><strong>Start planning the first community call, happening end of September</strong></div>
-      <div><span>✅</span><strong>Finish hiring for the full-time role</strong></div>
-      <div><span>🤝</span><strong>Interview the applicants who look promising</strong></div>
+      <div><span>📈</span><strong>Grow Second Body from 52K to 65K followers</strong></div>
+      <div><span>🎬</span><strong>3 TOFU videos</strong></div>
+      <div><span>💛</span><strong>Community engagement, minimum every alternate day</strong></div>
+      <div><span>📣</span><strong>Plan the first community call and lock a date</strong></div>
     </div>
   </div>
 
   <div class="group">
-    <h2 class="group-heading">✏️ Your take</h2>
+    <h2 class="group-heading">🧠 What's on Ayesha's mind</h2>
+    <!-- PLACEHOLDER SECTION: waiting on Ayesha's source voice dump. Once she sends it and approves the edited version,
+         replace the .audio-placeholder div below with a real <audio controls playsinline src="..."> element
+         and replace the 5 placeholder takeaways with her real ones. Do not publish her audio before her approval. -->
+    <p class="context">Every week Ayesha records a voice dump of what's on her mind. The edited audio and her key takeaways will live here so you're never guessing what she's thinking.</p>
+    <div class="audio-placeholder">🎧 Ayesha's voice dump - edited audio will be embedded here (being recorded)</div>
+    <div class="takeaway-list">
+      <div><span>1️⃣</span><strong>Takeaway 1 - coming with Ayesha's voice dump</strong></div>
+      <div><span>2️⃣</span><strong>Takeaway 2 - coming with Ayesha's voice dump</strong></div>
+      <div><span>3️⃣</span><strong>Takeaway 3 - coming with Ayesha's voice dump</strong></div>
+      <div><span>4️⃣</span><strong>Takeaway 4 - coming with Ayesha's voice dump</strong></div>
+      <div><span>5️⃣</span><strong>Takeaway 5 - coming with Ayesha's voice dump</strong></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">📣 First community call</h2>
+    <p class="context">Ayesha wants to pick a date now so you can both work backwards from it. Her read: most of the community is active between 10 PM and 1 AM, so she's thinking a 9:30-10 PM start. The open question is whether it should be a weekend slot or an evening slot.</p>
+    <label class="field-label" for="community_call">Do you have a date preference? And weekend or evening - what do you think works better?</label>
+    <textarea id="community_call" data-key="community_call" data-label="Community call" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="community_call"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">✏️ Your take on the goals</h2>
     <label class="field-label" for="changes">Anything you want to change? Anything you want to add?</label>
     <textarea id="changes" data-key="changes" data-label="Change or add" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
     <div class="voice-row" data-for="changes"></div>
   </div>
 
   <div class="group">
-    <h2 class="group-heading">🤝 Interviews</h2>
-    <p class="context">This is where Ayesha most needs your help. She is thinking of joint interviews - you and Ayesha blocking 4-5 hours. One option: you two sit on the applications together, shortlist the candidates you want, give her the names, and she goes back and forth with candidates to fix times. How do you want to approach this?</p>
-    <label class="field-label" for="interviews">What is the best way to run the interviews?</label>
-    <textarea id="interviews" data-key="interviews" data-label="Interview approach" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <h2 class="group-heading">🤝 Hiring - the full-time role</h2>
+    <p class="context">This is where Ayesha most needs your help. Her proposed approach: (1) All applicants and the research consolidated into one Google Drive spreadsheet. (2) You and Ayesha go through everything together and shortlist people in a quick 30-minute call. (3) Instinct + Jai take over and schedule everyone into a 4-5 hour back-to-back interview block, so you can come to a decision. That's what she's leaning towards - if you have a different approach, put it below and that's what you'll follow.</p>
+    <label class="field-label" for="interviews">Does this approach work for you, or do you have a better one?</label>
+    <textarea id="interviews" data-key="interviews" data-label="Hiring approach" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
     <div class="voice-row" data-for="interviews"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">💭 Quick thoughts</h2>
+    <label class="field-label" for="quick_thoughts">Anything quick on your mind for Ayesha - ideas, flags, small things?</label>
+    <textarea id="quick_thoughts" data-key="quick_thoughts" data-label="Quick thoughts" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="quick_thoughts"></div>
   </div>
 
   <div class="group">
@@ -127,6 +162,11 @@
   </div>
 
   <div class="group">
+    <h2 class="group-heading">🔗 One ask: connect your Instinct</h2>
+    <p class="context">Ayesha would love you to connect your Instinct. That way, at any point you know what is happening, and both of your Instincts can keep you aligned and pass questions back and forth - no more wondering what the other is working on. Just tell Ayesha you're in and she'll set it up.</p>
+  </div>
+
+  <div class="group">
     <h2 class="group-heading">📋 Send back</h2>
     <p class="context">Hit send and your answers - text and voice notes - go straight to Ayesha. Nothing is posted anywhere else.</p>
     <pre class="summary" id="summary"></pre>
@@ -140,7 +180,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
 (function () {
-  var state = { changes: '', interviews: '', feedback: '', blockers: '' };
+  var state = { community_call: '', changes: '', interviews: '', quick_thoughts: '', feedback: '', blockers: '' };
   var notes = {}; // key -> {url, blob, seconds, ext, mime}
   var summaryEl = document.getElementById('summary');
   var copyBtn = document.getElementById('copyBtn');
@@ -148,10 +188,330 @@
   function fmt(s) { var m = Math.floor(s / 60), r = Math.round(s % 60); return m + ':' + ('0' + r).slice(-2); }
 
   function render() {
-    var lines = ['✨ Ayesha + Tanmay Weekly Planning', ''];
+    var lines = ['✨ Ayesha + Tanmay Weekly Planning (Mon 21 - Sun 27 Sep 2026)', ''];
     var map = [
+      ['community_call', '📣 Community call'],
       ['changes', '✏️ Change or add'],
-      ['interviews', '🤝 Interview approach'],
+      ['interviews', '🤝 Hiring approach'],
+      ['quick_thoughts', '💭 Quick thoughts'],
+      ['feedback', '🔥 Brutal feedback'],
+      ['blockers', '🧱 Blockers']
+    ];
+    map.forEach(function (pair) {
+      var k = pair[0];
+      lines.push(pair[1] + ': ' + (state[k].trim() || '—'));
+      if (notes[k]) lines.push('   🎙️ Voice note recorded (' + fmt(notes[k].seconds) + ') - sending the audio file with this summary');
+      lines.push('');
+    });
+    summaryEl.textContent = lines.join('\n').trim();
+  }
+
+  document.querySelectorAll('textarea[data-key]').forEach(function (ta) {
+    ta.addEventListener('input', function () { state[ta.getAttribute('data-key')] = ta.value; render(); });
+  });
+
+  function pickMime() {
+    if (!window.MediaRecorder || !MediaRecorder.isTypeSupported) return '';
+    var cands = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac', 'audio/ogg;codecs=opus'];
+    for (var i = 0; i < cands.length; i++) { try { if (MediaRecorder.isTypeSupported(cands[i])) return cands[i]; } catch (e) {} }
+    return '';
+  }
+  function extFor(mime) { return mime.indexOf('mp4') >= 0 || mime.indexOf('aac') >= 0 ? 'm4a' : (mime.indexOf('ogg') >= 0 ? 'ogg' : 'webm'); }
+
+  document.querySelectorAll('.voice-row').forEach(function (row) {
+    var key = row.getAttribute('data-for');
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.className = 'voice-btn'; btn.textContent = '🎙️ Record a voice note';
+    row.appendChild(btn);
+    var timerEl = document.createElement('span'); timerEl.className = 'voice-timer'; timerEl.style.display = 'none';
+    row.appendChild(timerEl);
+    var noteBox = document.createElement('div'); noteBox.className = 'voice-note'; noteBox.style.display = 'none';
+    row.parentNode.insertBefore(noteBox, row.nextSibling);
+    var errEl = document.createElement('div'); errEl.className = 'mic-error'; errEl.style.display = 'none';
+    row.appendChild(errEl);
+
+    var recorder = null, stream = null, chunks = [], startTs = 0, tick = null;
+
+    function stopTimer() { if (tick) { clearInterval(tick); tick = null; } timerEl.style.display = 'none'; }
+    function resetUI() { btn.classList.remove('recording'); btn.textContent = '🎙️ Record a voice note'; stopTimer(); }
+    function showErr(msg) { errEl.textContent = msg; errEl.style.display = 'block'; }
+
+    btn.addEventListener('click', function () {
+      errEl.style.display = 'none';
+      if (recorder && recorder.state === 'recording') { recorder.stop(); return; }
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
+        showErr('Voice notes are not supported in this browser - please type instead, or open in Chrome/Safari.');
+        return;
+      }
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+        stream = s;
+        var mime = pickMime();
+        try { recorder = mime ? new MediaRecorder(s, { mimeType: mime }) : new MediaRecorder(s); }
+        catch (e) { recorder = new MediaRecorder(s); }
+        chunks = [];
+        recorder.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
+        recorder.onstop = function () {
+          var seconds = (Date.now() - startTs) / 1000;
+          if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; }
+          resetUI();
+          if (!chunks.length) { showErr('No audio was captured - please try again.'); return; }
+          var type = recorder.mimeType || mime || 'audio/webm';
+          var blob = new Blob(chunks, { type: type });
+          if (notes[key] && notes[key].url) URL.revokeObjectURL(notes[key].url);
+          var url = URL.createObjectURL(blob);
+          notes[key] = { url: url, blob: blob, seconds: seconds, ext: extFor(type), mime: type };
+          showNote();
+          render();
+        };
+        startTs = Date.now();
+        recorder.start();
+        btn.classList.add('recording'); btn.textContent = '⏹️ Stop';
+        timerEl.style.display = 'inline'; timerEl.textContent = '0:00';
+        tick = setInterval(function () { timerEl.textContent = fmt((Date.now() - startTs) / 1000); }, 500);
+      }).catch(function () {
+        showErr('Microphone blocked. Allow mic access for this page, then try again - or just type your answer.');
+      });
+    });
+
+    function showNote() {
+      var n = notes[key];
+      noteBox.innerHTML = '';
+      var label = document.createElement('div');
+      label.style.cssText = 'font-size:15px;font-weight:700;color:var(--ink-2);margin-bottom:8px;';
+      label.textContent = '🎙️ Voice note (' + fmt(n.seconds) + ')';
+      var audio = document.createElement('audio');
+      audio.controls = true; audio.src = n.url; audio.setAttribute('playsinline', '');
+      var actions = document.createElement('div'); actions.className = 'note-actions';
+      var dl = document.createElement('a');
+      dl.className = 'dl'; dl.href = n.url;
+      dl.download = 'tanmay-' + key + '-voice-note.' + n.ext;
+      dl.textContent = '⬇️ Download voice note';
+      var rr = document.createElement('button');
+      rr.type = 'button'; rr.className = 'rr'; rr.textContent = '🔁 Re-record';
+      rr.addEventListener('click', function () { noteBox.style.display = 'none'; if (notes[key]) { URL.revokeObjectURL(notes[key].url); delete notes[key]; } render(); btn.click(); });
+      actions.appendChild(dl); actions.appendChild(rr);
+      noteBox.appendChild(label); noteBox.appendChild(audio); noteBox.appendChild(actions);
+      noteBox.style.display = 'block';
+    }
+  });
+
+  var SUPABASE_URL = 'https://ggnbvralfjhtgomelcir.supabase.co';
+  var SUPABASE_KEY = 'sb_publishable_ZxNg6RQVRJ5mZ5KVvJsGSw_LDlDePq7';
+  var BUCKET = 'weekly-planning-audio';
+  var submitBtn = document.getElementById('submitBtn');
+  var statusEl = document.getElementById('submitStatus');
+  var sb = (window.supabase && window.supabase.createClient) ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+  function newId() {
+    if (crypto.randomUUID) return crypto.randomUUID();
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
+  submitBtn.addEventListener('click', function () {
+    statusEl.style.color = 'var(--ink-2)';
+    if (!sb) { statusEl.style.color = 'var(--red)'; statusEl.textContent = 'Could not load the sending service. Please use the copy option below and paste your answers to Ayesha.'; return; }
+    var hasText = Object.keys(state).some(function (k) { return state[k].trim().length > 0; });
+    var hasNotes = Object.keys(notes).length > 0;
+    if (!hasText && !hasNotes) { statusEl.style.color = 'var(--red)'; statusEl.textContent = 'Add at least one answer or voice note first 🙂'; return; }
+    submitBtn.disabled = true; submitBtn.textContent = '⏳ Sending…';
+    statusEl.textContent = 'Uploading…';
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayesha + Tanmay Weekly Planning</title>
+<style>
+  :root {
+    --teal: #0e7c86;
+    --teal-soft: #e3f4f3;
+    --ink: #17332f;
+    --ink-2: #4d6763;
+    --hairline: #dce8e6;
+    --raised: #f3f8f7;
+    --warm: #fff7e8;
+    --red: #d64545;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: #eef5f4;
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .card { max-width: 860px; margin: 0 auto; padding: 28px 20px 56px; font-size: 18px; line-height: 1.55; }
+  .hero { margin: 8px 0 8px; padding: 26px 22px; border-radius: 22px; background: linear-gradient(135deg, #cdeceb 0%, var(--warm) 70%); }
+  .hero-emoji { font-size: 38px; letter-spacing: 6px; margin-bottom: 12px; }
+  h1 { font-size: 40px; line-height: 1.05; margin: 0 0 10px; }
+  .fact { font-size: 19px; font-weight: 600; color: var(--ink-2); margin: 0 0 12px; }
+  .intro { font-size: 21px; line-height: 1.45; margin: 0; max-width: 760px; }
+  .group { padding: 30px 4px; border-bottom: 1px solid var(--hairline); }
+  .group:last-of-type { border-bottom: none; }
+  .group-heading { font-size: 29px; margin: 0 0 18px; }
+  .context { margin: 0 0 20px; color: var(--ink-2); font-size: 19px; line-height: 1.55; }
+  .field-label { display: block; font-size: 20px; font-weight: 700; line-height: 1.4; margin: 24px 0 12px; }
+  .goal-list { display: grid; gap: 12px; margin: 8px 0 6px; }
+  .goal-list div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 16px 18px; border: 1px solid var(--hairline); border-radius: 16px; align-items: center; background: var(--teal-soft); }
+  .goal-list span { font-size: 26px; }
+  .goal-list strong { font-size: 18px; font-weight: 600; line-height: 1.35; }
+  .takeaway-list { display: grid; gap: 12px; margin: 14px 0 6px; }
+  .takeaway-list div { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; align-items: center; background: var(--warm); }
+  .takeaway-list span { font-size: 20px; }
+  .takeaway-list strong { font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ink-2); }
+  .audio-placeholder { margin-top: 6px; padding: 16px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; background: var(--warm); font-size: 17px; font-weight: 600; color: var(--ink-2); }
+  textarea {
+    width: 100%; min-height: 110px; font-size: 18px; padding: 14px 16px; line-height: 1.5;
+    border: 2px solid var(--hairline); border-radius: 16px; font-family: inherit;
+    color: var(--ink); background: #fff; resize: vertical;
+  }
+  textarea:focus { outline: none; border-color: var(--teal); }
+  .voice-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+  .voice-btn {
+    min-height: 52px; padding: 12px 18px; font-size: 17px; font-weight: 600;
+    border: 2px solid var(--teal); border-radius: 14px; background: #fff; color: var(--teal);
+    cursor: pointer; font-family: inherit;
+  }
+  .voice-btn.recording { background: var(--red); border-color: var(--red); color: #fff; animation: pulse 1.4s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .65; } }
+  .voice-timer { font-size: 17px; font-weight: 700; color: var(--red); font-variant-numeric: tabular-nums; }
+  .voice-note { margin-top: 12px; padding: 14px; border: 1px solid var(--hairline); border-radius: 14px; background: var(--raised); }
+  .voice-note audio { width: 100%; height: 44px; margin-bottom: 10px; }
+  .voice-note .note-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .voice-note a.dl, .voice-note button.rr {
+    font-size: 15px; font-weight: 600; color: var(--teal); text-decoration: none;
+    border: 1px solid var(--teal); border-radius: 10px; padding: 8px 14px; background: #fff; cursor: pointer; font-family: inherit;
+  }
+  .mic-error { margin-top: 10px; font-size: 15px; color: var(--red); font-weight: 600; }
+  .summary { white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 20px; padding: 20px; border-radius: 16px; background: var(--raised); border: 1px solid var(--hairline); font-size: 17px; line-height: 1.65; font-family: inherit; }
+  .copy-btn { min-height: 58px; padding: 15px 26px; font-size: 18px; font-weight: 700; border: none; border-radius: 16px; background: var(--teal); color: #fff; cursor: pointer; font-family: inherit; width: 100%; }
+  .closing { text-align: center; color: var(--ink-2); font-size: 17px; padding: 26px 0 8px; }
+  @media (max-width: 600px) {
+    .card { font-size: 17px; padding: 16px 14px 48px; }
+    .hero { padding: 20px; }
+    h1 { font-size: 33px; }
+    .intro { font-size: 19px; }
+    .group { padding: 26px 2px; }
+    .group-heading { font-size: 25px; }
+    .summary { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="hero">
+    <div class="hero-emoji" aria-hidden="true">✨🧭</div>
+    <h1>Ayesha + Tanmay Weekly Planning</h1>
+    <p class="fact">Second Body Health - Monday 21 to Sunday 27 September 2026</p>
+    <p class="intro">Ayesha’s Instinct has a few quick questions so Ayesha can plan ahead.</p>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🎯 The goals for this week</h2>
+    <p class="context">These are the goals Ayesha has set for Second Body Health this week (Mon 21 - Sun 27 Sep):</p>
+    <div class="goal-list">
+      <div><span>📈</span><strong>Grow Second Body from 52K to 65K followers</strong></div>
+      <div><span>🎬</span><strong>3 TOFU videos</strong></div>
+      <div><span>💛</span><strong>Community engagement, minimum every alternate day</strong></div>
+      <div><span>📣</span><strong>Plan the first community call and lock a date</strong></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🧠 What's on Ayesha's mind</h2>
+    <!-- PLACEHOLDER SECTION: waiting on Ayesha's source voice dump. Once she sends it and approves the edited version,
+         replace the .audio-placeholder div below with a real <audio controls playsinline src="..."> element
+         and replace the 5 placeholder takeaways with her real ones. Do not publish her audio before her approval. -->
+    <p class="context">Every week Ayesha records a voice dump of what's on her mind. The edited audio and her key takeaways will live here so you're never guessing what she's thinking.</p>
+    <div class="audio-placeholder">🎧 Ayesha's voice dump - edited audio will be embedded here (being recorded)</div>
+    <div class="takeaway-list">
+      <div><span>1️⃣</span><strong>Takeaway 1 - coming with Ayesha's voice dump</strong></div>
+      <div><span>2️⃣</span><strong>Takeaway 2 - coming with Ayesha's voice dump</strong></div>
+      <div><span>3️⃣</span><strong>Takeaway 3 - coming with Ayesha's voice dump</strong></div>
+      <div><span>4️⃣</span><strong>Takeaway 4 - coming with Ayesha's voice dump</strong></div>
+      <div><span>5️⃣</span><strong>Takeaway 5 - coming with Ayesha's voice dump</strong></div>
+    </div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">📣 First community call</h2>
+    <p class="context">Ayesha wants to pick a date now so you can both work backwards from it. Her read: most of the community is active between 10 PM and 1 AM, so she's thinking a 9:30-10 PM start. The open question is whether it should be a weekend slot or an evening slot.</p>
+    <label class="field-label" for="community_call">Do you have a date preference? And weekend or evening - what do you think works better?</label>
+    <textarea id="community_call" data-key="community_call" data-label="Community call" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="community_call"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">✏️ Your take on the goals</h2>
+    <label class="field-label" for="changes">Anything you want to change? Anything you want to add?</label>
+    <textarea id="changes" data-key="changes" data-label="Change or add" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="changes"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🤝 Hiring - the full-time role</h2>
+    <p class="context">This is where Ayesha most needs your help. Her proposed approach: (1) All applicants and the research consolidated into one Google Drive spreadsheet. (2) You and Ayesha go through everything together and shortlist people in a quick 30-minute call. (3) Instinct + Jai take over and schedule everyone into a 4-5 hour back-to-back interview block, so you can come to a decision. That's what she's leaning towards - if you have a different approach, put it below and that's what you'll follow.</p>
+    <label class="field-label" for="interviews">Does this approach work for you, or do you have a better one?</label>
+    <textarea id="interviews" data-key="interviews" data-label="Hiring approach" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="interviews"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">💭 Quick thoughts</h2>
+    <label class="field-label" for="quick_thoughts">Anything quick on your mind for Ayesha - ideas, flags, small things?</label>
+    <textarea id="quick_thoughts" data-key="quick_thoughts" data-label="Quick thoughts" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="quick_thoughts"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🔥 Brutal feedback for Ayesha</h2>
+    <p class="context">Give very candid, honest feedback to Ayesha - what is going well, anything she needs to change, anything that needs urgent attention. Be as brutal as you can. She asked for it as brutal as possible.</p>
+    <label class="field-label" for="feedback">Your honest feedback</label>
+    <textarea id="feedback" data-key="feedback" data-label="Brutal feedback" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="feedback"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🧱 Blockers</h2>
+    <label class="field-label" for="blockers">Any blockers on your mind? Anything stuck that Ayesha should know about?</label>
+    <textarea id="blockers" data-key="blockers" data-label="Blockers" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="blockers"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">🔗 One ask: connect your Instinct</h2>
+    <p class="context">Ayesha would love you to connect your Instinct. That way, at any point you know what is happening, and both of your Instincts can keep you aligned and pass questions back and forth - no more wondering what the other is working on. Once your Instincts are connected, you'll also be able to drop random voice or text brain dumps whenever something comes to mind, and Ayesha's Instinct will consolidate them into one running document for her - no need to save it all for the weekly form. Just tell Ayesha you're in and she'll set it up.</p>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">📋 Send back</h2>
+    <p class="context">Hit send and your answers - text and voice notes - go straight to Ayesha. Nothing is posted anywhere else.</p>
+    <pre class="summary" id="summary"></pre>
+    <button type="button" class="copy-btn" id="submitBtn">🚀 Send to Ayesha</button>
+    <div id="submitStatus" style="margin-top:12px;font-size:16px;font-weight:600;"></div>
+    <button type="button" id="copyBtn" style="margin-top:14px;background:none;border:none;color:var(--ink-2);font-size:15px;text-decoration:underline;cursor:pointer;font-family:inherit;">or copy my answers instead</button>
+  </div>
+
+  <p class="closing">🔒 Only what you press send on goes to Ayesha. Nothing is submitted automatically.</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  var state = { community_call: '', changes: '', interviews: '', quick_thoughts: '', feedback: '', blockers: '' };
+  var notes = {}; // key -> {url, blob, seconds, ext, mime}
+  var summaryEl = document.getElementById('summary');
+  var copyBtn = document.getElementById('copyBtn');
+
+  function fmt(s) { var m = Math.floor(s / 60), r = Math.round(s % 60); return m + ':' + ('0' + r).slice(-2); }
+
+  function render() {
+    var lines = ['✨ Ayesha + Tanmay Weekly Planning (Mon 21 - Sun 27 Sep 2026)', ''];
+    var map = [
+      ['community_call', '📣 Community call'],
+      ['changes', '✏️ Change or add'],
+      ['interviews', '🤝 Hiring approach'],
+      ['quick_thoughts', '💭 Quick thoughts'],
       ['feedback', '🔥 Brutal feedback'],
       ['blockers', '🧱 Blockers']
     ];
@@ -287,8 +647,10 @@
       statusEl.textContent = 'Saving…';
       return sb.from('weekly_planning_responses').insert({
         id: id,
+        community_call_text: state.community_call.trim() || null,
         changes_text: state.changes.trim() || null,
         interviews_text: state.interviews.trim() || null,
+        quick_thoughts_text: state.quick_thoughts.trim() || null,
         feedback_text: state.feedback.trim() || null,
         blockers_text: state.blockers.trim() || null,
         audio: audioPaths,
