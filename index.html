@@ -39,10 +39,12 @@
   .goal-list span { font-size: 26px; }
   .goal-list strong { font-size: 18px; font-weight: 600; line-height: 1.35; }
   .takeaway-list { display: grid; gap: 12px; margin: 14px 0 6px; }
-  .takeaway-list div { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; align-items: center; background: var(--warm); }
+  .takeaway-list div { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 18px; border: 1px solid var(--hairline); border-radius: 16px; align-items: center; background: var(--warm); }
   .takeaway-list span { font-size: 20px; }
-  .takeaway-list strong { font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ink-2); }
-  .audio-placeholder { margin-top: 6px; padding: 16px 18px; border: 1px dashed #d9c9a3; border-radius: 16px; background: var(--warm); font-size: 17px; font-weight: 600; color: var(--ink-2); }
+  .takeaway-list strong { font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+  .audio-card { margin-top: 6px; padding: 16px 18px; border: 1px solid var(--hairline); border-radius: 16px; background: var(--raised); }
+  .audio-card .audio-label { font-size: 15px; font-weight: 700; color: var(--ink-2); margin-bottom: 10px; }
+  .audio-card audio { width: 100%; height: 44px; display: block; }
   textarea {
     width: 100%; min-height: 110px; font-size: 18px; padding: 14px 16px; line-height: 1.5;
     border: 2px solid var(--hairline); border-radius: 16px; font-family: inherit;
@@ -102,17 +104,16 @@
 
   <div class="group">
     <h2 class="group-heading">🧠 What's on Ayesha's mind</h2>
-    <!-- PLACEHOLDER SECTION: waiting on Ayesha's source voice dump. Once she sends it and approves the edited version,
-         replace the .audio-placeholder div below with a real <audio controls playsinline src="..."> element
-         and replace the 5 placeholder takeaways with her real ones. Do not publish her audio before her approval. -->
-    <p class="context">Every week Ayesha records a voice dump of what's on her mind. The edited audio and her key takeaways will live here so you're never guessing what she's thinking.</p>
-    <div class="audio-placeholder">🎧 Ayesha's voice dump - edited audio will be embedded here (being recorded)</div>
+    <p class="context">Every week Ayesha records a voice dump of what's on her mind. This week's edit, in her own voice, plus the key takeaways:</p>
+    <div class="audio-card">
+      <div class="audio-label">🎧 Ayesha's voice dump for this week (0:44)</div>
+      <audio controls playsinline preload="metadata" src="https://ggnbvralfjhtgomelcir.supabase.co/storage/v1/object/public/weekly-planning-assets/ayesha-mind-voice-dump.mp3"></audio>
+    </div>
     <div class="takeaway-list">
-      <div><span>1️⃣</span><strong>Takeaway 1 - coming with Ayesha's voice dump</strong></div>
-      <div><span>2️⃣</span><strong>Takeaway 2 - coming with Ayesha's voice dump</strong></div>
-      <div><span>3️⃣</span><strong>Takeaway 3 - coming with Ayesha's voice dump</strong></div>
-      <div><span>4️⃣</span><strong>Takeaway 4 - coming with Ayesha's voice dump</strong></div>
-      <div><span>5️⃣</span><strong>Takeaway 5 - coming with Ayesha's voice dump</strong></div>
+      <div><span>1️⃣</span><strong>Regular product brainstorming calls are working. Let’s keep them.</strong></div>
+      <div><span>2️⃣</span><strong>I want direct feedback on what’s working and what I should change.</strong></div>
+      <div><span>3️⃣</span><strong>A lot of my time is going into Second Body. I’m not slacking - I’m building systems.</strong></div>
+      <div><span>4️⃣</span><strong>Neha’s consultant contract is still pending. I don’t want it slipping to month-end; we should decide whether to follow up.</strong></div>
     </div>
   </div>
 
