@@ -38,6 +38,9 @@
   .goal-list div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 16px 18px; border: 1px solid var(--hairline); border-radius: 16px; align-items: center; background: var(--teal-soft); }
   .goal-list span { font-size: 26px; }
   .goal-list strong { font-size: 18px; font-weight: 600; line-height: 1.35; }
+  .question-block { padding: 20px 0; border-top: 1px solid var(--hairline); }
+  .question-block:first-of-type { border-top: 0; padding-top: 4px; }
+  .question-block h3 { margin: 0 0 8px; font-size: 20px; }
   .takeaway-list { display: grid; gap: 12px; margin: 14px 0 6px; }
   .takeaway-list div { display: grid; grid-template-columns: 34px 1fr; gap: 10px; padding: 14px 18px; border: 1px solid var(--hairline); border-radius: 16px; align-items: center; background: var(--warm); }
   .takeaway-list span { font-size: 20px; }
@@ -88,23 +91,57 @@
     <div class="hero-emoji" aria-hidden="true">✨🧭</div>
     <h1>Ayesha + Tanmay Weekly Planning</h1>
     <p class="fact">Second Body Health - Monday 21 to Sunday 27 September 2026</p>
-    <p class="intro">Ayesha’s Instinct has a few quick questions so Ayesha can plan ahead.</p>
+    <p class="intro">Ayesha put this together for herself and Tanmay to align, make decisions and plan the week together.</p>
   </div>
 
   <div class="group">
-    <h2 class="group-heading">🎯 The goals for this week</h2>
-    <p class="context">These are the goals Ayesha has set for Second Body Health this week (Mon 21 - Sun 27 Sep):</p>
+    <h2 class="group-heading">🎯 Our goals for this week</h2>
+    <p class="context">Ayesha put this plan together for herself and Tanmay so they can align, make the calls that matter and plan the week together (Mon 21 - Sun 27 Sep):</p>
     <div class="goal-list">
-      <div><span>📈</span><strong>Grow Second Body from 52K to 65K followers</strong></div>
-      <div><span>🎬</span><strong>3 TOFU videos</strong></div>
-      <div><span>💛</span><strong>Community engagement, minimum every alternate day</strong></div>
+      <div><span>📈</span><strong>Grow Second Body from the current 51K to 65K followers</strong></div>
+      <div><span>🎬</span><strong>Publish five total posts across TOFU, Ayesha's main page and Second Body actual reels</strong></div>
+      <div><span>💛</span><strong>Engage the Second Body community more actively, ideally at least every alternate day, to build trust and connection</strong></div>
       <div><span>📣</span><strong>Plan the first community call and lock a date</strong></div>
     </div>
   </div>
 
   <div class="group">
+    <h2 class="group-heading">✏️ Your thoughts on the goals</h2>
+    <label class="field-label" for="changes">What do you think of these goals? What would you change or add?</label>
+    <textarea id="changes" data-key="changes" data-label="Thoughts on the goals" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <div class="voice-row" data-for="changes"></div>
+  </div>
+
+  <div class="group">
+    <h2 class="group-heading">❓ Specific questions for Tanmay</h2>
+
+    <div class="question-block">
+      <h3>📣 First community call</h3>
+      <p class="context">Ayesha wants to pick a date now so you can both work backwards from it. Her read: most of the community is active between 10 PM and 1 AM, so she's thinking a 9:30-10 PM start. The open question is whether it should be a weekend slot or an evening slot.</p>
+      <label class="field-label" for="community_call">Do you have a date preference? And weekend or evening - what do you think works better?</label>
+      <textarea id="community_call" data-key="community_call" data-label="Community call" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+      <div class="voice-row" data-for="community_call"></div>
+    </div>
+
+    <div class="question-block">
+      <h3>🤝 Hiring - the full-time role</h3>
+      <p class="context">Ayesha's proposed approach: (1) Consolidate all applicants and research into one Google Drive spreadsheet. (2) You and Ayesha shortlist together in a quick 30-minute call. (3) Instinct + Jai schedule everyone into a 4-5 hour back-to-back interview block so you can make a decision. If you have a better approach, put it below and that's what you'll follow.</p>
+      <label class="field-label" for="interviews">Does this approach work for you, or do you have a better one?</label>
+      <textarea id="interviews" data-key="interviews" data-label="Hiring approach" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+      <div class="voice-row" data-for="interviews"></div>
+    </div>
+
+    <div class="question-block">
+      <h3>💭 Quick thoughts</h3>
+      <label class="field-label" for="quick_thoughts">Any other ideas, flags, questions or quick thoughts for Ayesha?</label>
+      <textarea id="quick_thoughts" data-key="quick_thoughts" data-label="Quick thoughts" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+      <div class="voice-row" data-for="quick_thoughts"></div>
+    </div>
+  </div>
+
+  <div class="group">
     <h2 class="group-heading">🧠 What's on Ayesha's mind</h2>
-    <p class="context">Every week Ayesha records a voice dump of what's on her mind. This week's edit, in her own voice, plus the key takeaways:</p>
+    <p class="context">Ayesha recorded a voice dump of what's on her mind. This is the approved edit in her own voice, with the key takeaways:</p>
     <div class="audio-card">
       <div class="audio-label">🎧 Ayesha's voice dump for this week (0:44)</div>
       <audio controls playsinline preload="metadata" src="https://ggnbvralfjhtgomelcir.supabase.co/storage/v1/object/public/weekly-planning-assets/ayesha-mind-voice-dump.mp3"></audio>
@@ -118,53 +155,19 @@
   </div>
 
   <div class="group">
-    <h2 class="group-heading">📣 First community call</h2>
-    <p class="context">Ayesha wants to pick a date now so you can both work backwards from it. Her read: most of the community is active between 10 PM and 1 AM, so she's thinking a 9:30-10 PM start. The open question is whether it should be a weekend slot or an evening slot.</p>
-    <label class="field-label" for="community_call">Do you have a date preference? And weekend or evening - what do you think works better?</label>
-    <textarea id="community_call" data-key="community_call" data-label="Community call" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
-    <div class="voice-row" data-for="community_call"></div>
-  </div>
-
-  <div class="group">
-    <h2 class="group-heading">✏️ Your take on the goals</h2>
-    <label class="field-label" for="changes">Anything you want to change? Anything you want to add?</label>
-    <textarea id="changes" data-key="changes" data-label="Change or add" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
-    <div class="voice-row" data-for="changes"></div>
-  </div>
-
-  <div class="group">
-    <h2 class="group-heading">🤝 Hiring - the full-time role</h2>
-    <p class="context">This is where Ayesha most needs your help. Her proposed approach: (1) All applicants and the research consolidated into one Google Drive spreadsheet. (2) You and Ayesha go through everything together and shortlist people in a quick 30-minute call. (3) Instinct + Jai take over and schedule everyone into a 4-5 hour back-to-back interview block, so you can come to a decision. That's what she's leaning towards - if you have a different approach, put it below and that's what you'll follow.</p>
-    <label class="field-label" for="interviews">Does this approach work for you, or do you have a better one?</label>
-    <textarea id="interviews" data-key="interviews" data-label="Hiring approach" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
-    <div class="voice-row" data-for="interviews"></div>
-  </div>
-
-  <div class="group">
-    <h2 class="group-heading">💭 Quick thoughts</h2>
-    <label class="field-label" for="quick_thoughts">Anything quick on your mind for Ayesha - ideas, flags, small things?</label>
-    <textarea id="quick_thoughts" data-key="quick_thoughts" data-label="Quick thoughts" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
-    <div class="voice-row" data-for="quick_thoughts"></div>
-  </div>
-
-  <div class="group">
     <h2 class="group-heading">🔥 Brutal feedback for Ayesha</h2>
-    <p class="context">Give very candid, honest feedback to Ayesha - what is going well, anything she needs to change, anything that needs urgent attention. Be as brutal as you can. She asked for it as brutal as possible.</p>
+    <p class="context">Give Ayesha very candid, honest feedback: what's going well, what she needs to change and anything that needs urgent attention. She wants it as direct as possible.</p>
     <label class="field-label" for="feedback">Your honest feedback</label>
     <textarea id="feedback" data-key="feedback" data-label="Brutal feedback" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
     <div class="voice-row" data-for="feedback"></div>
   </div>
 
   <div class="group">
-    <h2 class="group-heading">🧱 Blockers</h2>
-    <label class="field-label" for="blockers">Any blockers on your mind? Anything stuck that Ayesha should know about?</label>
-    <textarea id="blockers" data-key="blockers" data-label="Blockers" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
+    <h2 class="group-heading">🧱 Blockers or anything else</h2>
+    <label class="field-label" for="blockers">Any blockers, questions or anything else Ayesha should know about?</label>
+    <textarea id="blockers" data-key="blockers" data-label="Blockers or anything else" placeholder="Type here, or drop a voice note below 🎙️"></textarea>
     <div class="voice-row" data-for="blockers"></div>
-  </div>
-
-  <div class="group">
-    <h2 class="group-heading">🔗 One ask: connect your Instinct</h2>
-    <p class="context">Ayesha would love you to connect your Instinct. That way, at any point you know what is happening, and both of your Instincts can keep you aligned and pass questions back and forth - no more wondering what the other is working on. Once your Instincts are connected, you'll also be able to drop random voice or text brain dumps whenever something comes to mind, and Ayesha's Instinct will consolidate them into one running document for her - no need to save it all for the weekly form. Just tell Ayesha you're in and she'll set it up.</p>
+    <p class="context" style="margin-top:18px;"><strong>For the weeks ahead:</strong> once your Instincts are connected, you can drop random voice or text brain dumps whenever something comes to mind. Ayesha's Instinct will consolidate them into one running document for her, so you won't need to save everything for the weekly form.</p>
   </div>
 
   <div class="group">
